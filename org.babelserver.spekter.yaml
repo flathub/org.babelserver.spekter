@@ -23,9 +23,8 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
-  # Read-only host access: Spekter only reads files to compare them,
-  # never writes them. Meld ships with full host rw access on Flathub.
-  - --filesystem=host:ro
+  # No --filesystem access: files and directories are opened through the
+  # XDG FileChooser portal, which grants access only to what the user picks.
 
 modules:
   - name: spekter
@@ -54,5 +53,5 @@ modules:
       - type: git
         url: https://gitlab.com/hallyhaa/spekter.git
         tag: v1.2.1
-        commit: fffebb62d11aef8a3e0e44f409b3dbb98815ce16
+        commit: c59e977afa00fefecca8261de9a4cb4813e6d8e3
       - cargo-sources.json
