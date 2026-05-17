@@ -53,5 +53,5 @@ modules:
       - type: git
         url: https://gitlab.com/hallyhaa/spekter.git
         tag: v1.2.1
-        commit: c59e977afa00fefecca8261de9a4cb4813e6d8e3
+        commit: b578e88eb0db62fcc34cc09e93c24b433a9b7041
       - cargo-sources.json
