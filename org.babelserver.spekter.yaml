@@ -52,6 +52,6 @@ modules:
       # instead, temporarily swap this for: { type: dir, path: .. }
       - type: git
         url: https://gitlab.com/hallyhaa/spekter.git
-        tag: v1.2.1
-        commit: b578e88eb0db62fcc34cc09e93c24b433a9b7041
+        tag: v1.2.2
+        commit: 3a6f3177def94234827f1d048185c692dadb99cf
       - cargo-sources.json
