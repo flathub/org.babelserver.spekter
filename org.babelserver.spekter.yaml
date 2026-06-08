@@ -41,8 +41,6 @@ modules:
           /app/share/applications/org.babelserver.spekter.desktop
       - install -Dm644 flatpak/org.babelserver.spekter.metainfo.xml
           /app/share/metainfo/org.babelserver.spekter.metainfo.xml
-      - install -Dm644 assets/icon-256.png
-          /app/share/icons/hicolor/256x256/apps/org.babelserver.spekter.png
       - install -Dm644 assets/icon.svg
           /app/share/icons/hicolor/scalable/apps/org.babelserver.spekter.svg
       - install -Dm644 assets/spekter-symbolic.svg
@@ -52,6 +50,6 @@ modules:
       # instead, temporarily swap this for: { type: dir, path: .. }
       - type: git
         url: https://gitlab.com/hallyhaa/spekter.git
-        tag: v1.2.2
-        commit: 3a6f3177def94234827f1d048185c692dadb99cf
+        tag: v1.2.3
+        commit: 5e4116b38909a20a56755bef9ceb2343aced3071
       - cargo-sources.json
