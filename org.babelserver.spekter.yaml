@@ -11,7 +11,7 @@
 id: org.babelserver.spekter
 
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -23,6 +23,11 @@ finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
+  # The plugins window (File > Plugins): fetches the syntax-plugin catalogue
+  # and plugin zips (a few kilobytes of grammar files) from gitlab.com over
+  # HTTPS, only when the user opens its Available list or clicks Install. Nothing else
+  # in Spekter uses the network; there is no telemetry and no update check.
+  - --share=network
   # No --filesystem access: files and directories are opened through the
   # XDG FileChooser portal, which grants access only to what the user picks.
 
@@ -50,6 +55,6 @@ modules:
       # instead, temporarily swap this for: { type: dir, path: .. }
       - type: git
         url: https://gitlab.com/hallyhaa/spekter.git
-        tag: v1.4.0
-        commit: d6df7406aae916c7fffc4d5fbcb8b2e630d242f7
+        tag: v1.5.0
+        commit: bf94c0693f9e22ca7a06cffb26abec180fda4aea
       - cargo-sources.json
